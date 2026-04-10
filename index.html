@@ -4,22 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BUSD | Base Unified Standard Dollar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; background-color: #0052FF; color: white; text-align: center; padding: 50px; }
-        .container { max-width: 800px; margin: auto; background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; }
-        h1 { font-size: 3em; margin-bottom: 10px; }
-        .contract { background: white; color: #0052FF; padding: 10px; border-radius: 5px; font-family: monospace; word-break: break-all; }
-        .btn { display: inline-block; background: #fff; color: #0052FF; padding: 15px 30px; margin-top: 20px; text-decoration: none; border-radius: 50px; font-weight: bold; }
+        body { background-color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .base-blue { background-color: #0052ff; } /* Official Base Blue */
+        .card-shadow { box-shadow: 0 4px 20px rgba(0, 82, 255, 0.1); }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>BUSD</h1>
-        <p>Base Unified Standard Dollar</p>
-        <p>The next generation standard for the Base Ecosystem.</p>
-        <div class="contract">0x25d34817D4205fE605b4C65Ed3Be83C85107d333</div>
-        <br>
-        <a href="https://basescan.org/address/0x25d34817D4205fE605b4C65Ed3Be83C85107d333" class="btn">View on Basescan</a>
-    </div>
+<body class="text-slate-900">
+
+    <nav class="bg-white border-b border-slate-200 py-4 px-6 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center gap-2">
+            <div class="w-10 h-10 base-blue rounded-full flex items-center justify-center text-white font-bold text-xl">B</div>
+            <span class="font-bold text-xl tracking-tight">BUSD <span class="text-blue-600">Base</span></span>
+        </div>
+        <div class="hidden md:flex gap-8 font-medium">
+            <a href="#dashboard" class="hover:text-blue-600">Dashboard</a>
+            <a href="https://basescan.org/token/0x25d34817D4205fE605b4C65Ed3Be83C85107d333" target="_blank" class="hover:text-blue-600">Basescan</a>
+            <a href="#" class="hover:text-blue-600">Whitepaper</a>
+        </div>
+        <a href="https://app.uniswap.org" target="_blank" class="base-blue text-white px-6 py-2 rounded-full font-bold hover:opacity-90 transition">Buy Now</a>
+    </nav>
+
+    <header class="py-16 px-6 text-center bg-white border-b border-slate-100">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6">The Future of Value <br><span class="text-blue-600">on Base Chain</span></h1>
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto mb-10">Base Unified Standard Dollar (BUSD) is a decentralized, fixed-supply utility token built for the next billion users on-chain.</p>
+        
+        <div class="max-w-xl mx-auto bg-slate-100 p-4 rounded-xl flex items-center justify-between border border-slate-200">
+            <code class="text-sm md:text-base text-blue-700 font-mono break-all">0x25d34817D4205fE605b4C65Ed3Be83C85107d333</code>
+            <button onclick="copyCA()" class="ml-4 text-slate-500 hover:text-blue-600"><i class="fa-solid fa-copy"></i></button>
+        </div>
+    </header>
+
+    <section id="dashboard" class="py-16 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-10 text-center">Token Dashboard</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl card-shadow border border-slate-100">
+                <p class="text-slate-500 font-medium mb-2 uppercase text-sm tracking-widest">Total Supply</p>
+                <h3 class="text-3xl font-bold">1,000,000,000</h3>
+                <p class="text-blue-600 mt-2 font-semibold">BUSD Tokens</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl card-shadow border border-slate-100">
+                <p class="text-slate-500 font-medium mb-2 uppercase text-sm tracking-widest">Network</p>
+                <h3 class="text-3xl font-bold">Base Mainnet</h3>
+                <p class="text-green-600 mt-2 font-semibold"><i class="fa-solid fa-circle text-xs"></i> Live & Verified</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl card-shadow border border-slate-100">
+                <p class="text-slate-500 font-medium mb-2 uppercase text-sm tracking-widest">Tax / Fees</p>
+                <h3 class="text-3xl font-bold">0% / 0%</h3>
+                <p class="text-slate-600 mt-2 font-semibold">Buy / Sell Tax</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-blue-600 text-white px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Why BUSD?</h2>
+            <div class="grid md:grid-cols-2 gap-12 text-left">
+                <div>
+                    <h4 class="text-xl font-bold mb-2"><i class="fa-solid fa-shield-halved mr-2"></i> Immutable Supply</h4>
+                    <p class="text-blue-100">No new tokens can ever be minted. Your share of the ecosystem is protected from inflation.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-2"><i class="fa-solid fa-bolt mr-2"></i> Built on Base</h4>
+                    <p class="text-blue-100">Leveraging Coinbase's L2 for institutional-grade security and sub-cent transaction fees.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-2"><i class="fa-solid fa-users mr-2"></i> Community Driven</h4>
+                    <p class="text-blue-100">Proudly developed in India, serving a global DeFi community.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-2"><i class="fa-solid fa-lock mr-2"></i> Future Proof</h4>
+                    <p class="text-blue-100">Liquidity locking and governance features coming to ensure long-term stability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-6 text-center border-t border-slate-200 bg-white">
+        <div class="flex justify-center gap-6 mb-6 text-2xl text-slate-400">
+            <a href="#" class="hover:text-blue-600"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="hover:text-blue-600"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://github.com/binnace" class="hover:text-blue-600"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p class="text-slate-500">© 2026 BUSD Ecosystem. Built with 💙 on Base Chain.</p>
+    </footer>
+
+    <script>
+        function copyCA() {
+            const ca = "0x25d34817D4205fE605b4C65Ed3Be83C85107d333";
+            navigator.clipboard.writeText(ca);
+            alert("Contract Address Copied!");
+        }
+    </script>
 </body>
 </html>
