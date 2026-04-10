@@ -1,6 +1,5 @@
-# Base-united-standard-dollar
 <p align="center">
-  <img src="logo.png" alt="BUSD Logo" width="400">
+  <img src="logo.PNG" alt="BUSD Logo" width="400">
 </p>
 
 # 💎 Base Unified Standard Dollar (BUSD)
@@ -42,7 +41,6 @@ BUSD is designed with a strictly fixed supply to protect holders from inflation.
 ## 🔗 Official Links
 - **Website:** [https://binnace.github.io/Base-united-standard-dollar/](https://binnace.github.io/Base-united-standard-dollar/)
 - **Basescan:** [View on Basescan](https://basescan.org/token/0x25d34817D4205fE605b4C65Ed3Be83C85107d333)
-- **Twitter:** [Follow us on X](#)
 
 ---
 
